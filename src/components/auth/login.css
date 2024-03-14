@@ -1,0 +1,128 @@
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+.login .back {
+    height: 10%;
+    padding: 4%;
+}
+
+.login .back .icon {
+    font-size: 2em;
+    color: #808080;
+}
+
+.login .label {
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .label h1 {
+    font-size: 3em;
+    font-weight: 500;
+    color: #1F1F1F;
+}
+
+.login form.login {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 4%;
+}
+
+.login form.login .username {
+    display: flex;
+    align-items: center;
+    border: 0;
+    padding: 4% 6%;
+    border-radius: 1em;
+    padding: 4% 6%;
+    background-color: #FFFFFF;
+    box-shadow: 0.2em 0.2em 1em -0.5em #808080;
+    margin-bottom: 4%;
+}
+
+.login form.login .username .icon {
+    font-size: 1.6em;
+    color: #1F1F1F;
+    margin-right: 0.5em;
+}
+
+.login form.login .username input {
+    font-size: 1em;
+    color: #1F1F1F;
+    background-color: transparent;
+    width: 100%;
+    border: 0;
+    border-radius: 1em;
+    outline: 0;
+}
+
+.login form.login .password {
+    display: flex;
+    align-items: center;
+    border: 0;
+    padding: 4% 6%;
+    border-radius: 1em;
+    padding: 4% 6%;
+    background-color: #FFFFFF;
+    box-shadow: 0.2em 0.2em 1em -0.5em #808080;
+}
+
+.login form.login .password .icon {
+    font-size: 1.6em;
+    color: #1F1F1F;
+    margin-right: 0.5em;
+}
+
+.login form.login .password input {
+    font-size: 1em;
+    color: #1F1F1F;
+    background-color: transparent;
+    width: 100%;
+    border: 0;
+    border-radius: 1em;
+    outline: 0;
+}
+
+.login form.login .password-option {
+    display: flex;
+    justify-content: flex-end;
+    padding: 4%;
+}
+
+.login form.login .password-option small {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #1F1F1F;
+}
+
+.login form.login button {
+    margin-top: 4%;
+    font-size: 1em;
+    font-weight: 400;
+    color: #F7F7F7;
+    background-color: #1F1F1F;
+    box-shadow: 0.2em 0.2em 1em -0.5em #808080;
+    border: 0;
+    border-radius: 2em;
+    outline: 0;
+    padding: 4%;
+}
+
+.login .options {
+    height: 15%;
+    padding: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.login .options p {
+    font-size: 1em;
+    font-weight: 400;
+    color: #1F1F1F;
+}

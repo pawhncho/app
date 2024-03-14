@@ -1,0 +1,23 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F7F7F7;
+}
+
+main .alert {
+    padding: 4%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+main .alert .message {
+    padding: 4% 6%;
+    border-radius: 1em;
+    font-size: 0.9em;
+}

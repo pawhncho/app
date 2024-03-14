@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Main from './components/main/Main.js';
+import Home from './components/home/Home.js';
+import Login from './components/auth/Login.js';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [alert, setAlert] = useState()
+
+    useEffect(() => {
+        if (alert) {
+            setTimeout(() => {
+                setAlert()
+            }, 3000)
+        }
+        // eslint-disable-next-line
+    }, [])
+
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Main alert={alert} />}>
+                    <Route path='/' element={<Home />}>
+
+                    </Route>
+                    <Route path='login/' element={<Login />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
 export default App;
