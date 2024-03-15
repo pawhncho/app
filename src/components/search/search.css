@@ -28,10 +28,38 @@
     border-radius: 1em;
 }
 
+.search .products .list .product p.off-percent {
+    margin-top: 4%;
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #bb6060;
+}
+
+.search .products .list .product .offer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search .products .list .product .offer p.price {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #bb6060;
+}
+
+.search .products .list .product .offer p.off-price {
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #808080;
+}
+
 .search .products .list .product p.price {
     margin-top: 4%;
     font-size: 0.95em;
     font-weight: 700;
+    color: #808080;
 }
 
 .search .categories .list {
@@ -45,17 +73,18 @@
     padding: 0;
     width: 48%;
     box-shadow: 0.2em 0.2em 1em -0.5em #808080;
-    border-radius: 1em;
+    border-radius: 0.5em;
     float: left;
     margin-top: 4%;
 }
 
 .search .categories .list .category p.category-name {
     font-size: 0.95em;
-    font-weight: 400;
+    font-weight: 700;
     color: #1F1F1F;
     background-color: #F7F7F7;
-    border-radius: 1em;
-    padding: 15% 8%;
-    opacity: 0.6;
+    border-radius: 0.5em;
+    padding: 15% 6%;
+    text-align: center;
+    opacity: 0.5;
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Loading from '../loading/Loading.js';
 import './search.css';
@@ -36,7 +36,7 @@ function Search() {
                 {
                     categories ?
                     <div className="categories">
-                        <h4>Categories</h4>
+                        <h4>Results in Categories</h4>
                         <div className="list">
                             {
                                 categories.map(category => {
@@ -50,7 +50,7 @@ function Search() {
                 {
                     products ?
                     <div className="products">
-                        <h4>Products</h4>
+                        <h4>Results in Products</h4>
                         <div className="list">
                             {
                                 products.map(product => {
@@ -69,18 +69,32 @@ function Search() {
 function Product({ product }) {
     return (
         <div className="product">
-            <img src={'http://192.168.1.3:8000' + product.image} alt={null} />
-            <p className="price">{product.price}</p>
+            <img src={'http://192.168.1.3:8000' + product.image} alt="..." />
+            {
+                product.off_percent ?
+                <p className="off-percent">({product.off_percent} OFF)</p> :
+                null
+            }
+            {
+                product.off_percent ?
+                <div className="offer">
+                    <p className="off-price">{product.off_price}</p>
+                    <p className="price">{product.price}</p>
+                </div> :
+                <p className="price">{product.price}</p>
+            }
         </div>
     )
 }
 
 function Category({ category }) {
+    const navigate = useNavigate()
+
     return (
         <div className="category"
-                style={{ backgroundImage: 'url(' + '"http://192.168.1.3:8000' + category.image + '/")',
-                            backgroundSize: 'cover' }}>
-            <p className="category-name">{category.name}</p>
+                style={// eslint-disable-next-line
+                        { backgroundImage: 'url(' + '"http://192.168.1.3:8000' + category.image + '/")', backgroundSize: 'cover' }}>
+            <p className="category-name" onClick={() => navigate('/category/' + category.uuid)}>{category.name}</p>
         </div>
     )
 }

@@ -1,0 +1,63 @@
+.category {
+    padding: 4%;
+}
+
+.category h4 {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #808080;
+}
+
+.category .products {
+    display: flex;
+    gap: 4%;
+    flex-wrap: wrap;
+    margin-bottom: 4%;
+}
+
+.category .products .product {
+    width: 48%;
+    margin-top: 4%;
+}
+
+.category .products .product img {
+    padding: 4%;
+    width: 100%;
+    mix-blend-mode: multiply;
+    box-shadow: 0.2em 0.2em 1em -0.5em #808080;
+    border-radius: 1em;
+}
+
+.category .products .product p.off-percent {
+    margin-top: 4%;
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #bb6060;
+}
+
+.category .products .product .offer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category .products .product .offer p.price {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #bb6060;
+}
+
+.category .products .product .offer p.off-price {
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #808080;
+}
+
+.category .products .product p.price {
+    margin-top: 4%;
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #808080;
+}

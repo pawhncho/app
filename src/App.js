@@ -4,6 +4,7 @@ import Main from './components/main/Main.js';
 import Home from './components/home/Home.js';
 import Login from './components/auth/Login.js';
 import Search from './components/search/Search.js';
+import Category from './components/category/Category.js';
 
 function App() {
     const [alert, setAlert] = useState()
@@ -22,7 +23,8 @@ function App() {
             <Routes>
                 <Route path='/' element={<Main alert={alert} />}>
                     <Route path='/' element={<Home />}>
-                        <Route path='search/:keyword/' element={<Search />} />
+                        <Route path='/search/:keyword/' element={<Search />} />
+                        <Route path='/category/:uuid/' element={<Category />} />
                     </Route>
                     <Route path='login/' element={<Login />} />
                 </Route>
